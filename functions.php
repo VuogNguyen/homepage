@@ -25,3 +25,8 @@ add_action('init', 'wpbuild_scripts');
 register_nav_menus(array(
 	'header_menu' => __( 'Header Menu', 'minyoung' ),
 ));
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+

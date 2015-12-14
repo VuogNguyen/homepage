@@ -30,10 +30,10 @@ get_header(); ?>
 		<?php endif; ?>
 		<div class="social-menu">
 			<ul>
-				<a href=""><li class="fa fa-twitter"></li></a>
-				<a href=""><li class="fa fa-linkedin"></li></a>
-				<a href=""><li class="fa fa-github-alt"></li></a>
-				<a href=""><li class="fa fa-skype"></li></a>
+				<a href="<?php the_field('twitter', 'option'); ?>"><li class="fa fa-twitter"></li></a>
+				<a href="<?php the_field('linkedin', 'option'); ?>"><li class="fa fa-linkedin"></li></a>
+				<a href="<?php the_field('github', 'option'); ?>"><li class="fa fa-github-alt"></li></a>
+				<a href="mailto:<?php the_field('mail', 'option'); ?>"><li class="fa fa-envelope"></li></a>
 			</ul>
 		</div>
 	</div>
