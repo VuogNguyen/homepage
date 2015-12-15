@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title><?php wp_title('&laquo;', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+        <title><?php wp_title('&laquo;', true, 'right'); ?> Vuong Nguyen (Harvey)</title>
         <meta name="description" content="">
 
         <!-- Mobile Specific Metas
