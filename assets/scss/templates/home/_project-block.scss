@@ -83,16 +83,49 @@
 	}
 
 	@include breakpoint(tablet) {
-		.slick-slider > li {
+		.slick-track, .slick-slide {
+			@include transition(0.5s all);
+		}
+		.slick-slider {
+			height: initial !important;
+			margin: 0 auto 0;
+		}
+		.slick-slider .slick-slide {
+			a { display: block; }
 			display: block;
-			width: 26vw;
-			&:nth-child(even),
-			&:nth-child(odd) {
-				margin: 0 0 0 2vw;
+			height: 100%;
+			border-radius: 5px;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+			position: relative;
+			margin: 10px;
+		}
+
+		.slick-arrow {
+			@extend .nv-arrow;
+			display: block;
+			position: absolute;
+			top: 45%;
+			width: 30px !important;
+			height: 30px !important;
+			border-width: 2px !important;
+			border-color: #000000 !important;
+			z-index: 1;
+		}
+		.slick-next {
+			@extend .nv-arrow.arrow-right;
+			right: 30px;
+			&:before {
+				display: none;
 			}
-			&:first-child {
-				margin-top: 200px;
+		}
+		.slick-prev {
+			@extend .nv-arrow.arrow-left;
+			left: 30px;
+			&:before {
+				display: none;
 			}
 		}
 	}
+
+
 }

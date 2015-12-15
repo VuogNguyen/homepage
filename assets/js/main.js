@@ -1,6 +1,7 @@
 var Home = {
 	init: function() {
 		var self = this;
+		self.projectSlider = "";
 
 		self.animsition();
 		self.fullHeightScreen();
@@ -22,15 +23,44 @@ var Home = {
 	addSlick: function() {
 		var self = this;
 		width = $(window).width();
+		if (self.projectSlider === "") {
+			self.projectSlider = $('.slick-slider').clone();
+		}
 
+		$('.slick-slider').on('init', function(event, slick){
+			var height = $(".porfolio-block").height()/2 - $(this).height()/2;
+			$(this).css({
+				"margin-top": height
+			});
+		});
 		if (width > 768) {
-			console.log("true");
 			$(".slick-slider").slick({
-				dots: true,
-				speed: 500
+				centerMode: true,
+				speed: 0,
+				slidesToShow: 5,
+				slidesToScroll: 5,
+				responsive: [
+				{
+					breakpoint: 1280,
+					settings: {
+						slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 768,
+					settings: "unslick"
+				}
+				]
 			});
 		} else {
 			$(".slick-slider.slick-initialized").slick('unslick');
+			$(".porfolio-block > ul").replaceWith(self.projectSlider);
 		}
 
 	},

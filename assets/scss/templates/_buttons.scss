@@ -30,4 +30,10 @@
 	&.arrow-up {
 		@include transform(rotate(-45deg) translateX(-50%));
 	}
+	&.arrow-left {
+		@include transform(rotate(-135deg) translateX(-50%));
+	}
+	&.arrow-right {
+		@include transform(rotate(45deg) translateX(-50%));
+	}
 }
