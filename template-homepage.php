@@ -40,8 +40,8 @@ get_header(); ?>
 
 	<div class="intro-block pos-f full-height slide-up">
 		<div class="content-wrapper">
-			<p class="quote">It's not that I'm so smart, it's just that I stay with problems longer.</p>
-			<p class="author">Albert Einstein</p>
+			<p class="quote"><?php the_field('quote'); ?></p>
+			<p class="author"><?php the_field('author'); ?></p>
 			<a class="nv-btn js-btn" data-action="slide-up">Show projects</a>
 		</div>
 
@@ -52,23 +52,22 @@ get_header(); ?>
 
 	<div class="porfolio-block full-height pos-f">
 		<ul class="slick-slider">
-		<?php
-			$i = 0;
-			while ( $i < 8 ) {
-		?>
-			<li class="project">
-				<a href="">
-					<div class="featured-img"></div>
-					<div class="project-info">
-						<h6>TMA-1 X</h6>
-						<p>branding</p>
-					</div>
-				</a>
-			</li>
-		<?php
-			$i+=1;
-		}
-		?>
+			<?php
+			if( have_rows('porfolio') ):
+				while ( have_rows('porfolio') ) : the_row(); ?>
+					<li class="project">
+						<a href="<?php the_sub_field('url');?>">
+							<div class="featured-img" style="background-image: url(<?php the_sub_field('featured_image');?>);"></div>
+							<div class="project-info">
+								<h6><?php the_sub_field('heading');?></h6>
+								<p><?php the_sub_field('description');?></p>
+							</div>
+						</a>
+					</li>
+				<?php
+				endwhile;
+			endif;
+			?>
 		</ul>
 	</div>
 

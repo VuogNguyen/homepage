@@ -39,6 +39,7 @@ var Home = {
 				speed: 0,
 				slidesToShow: 5,
 				slidesToScroll: 5,
+				infinite: true,
 				responsive: [
 				{
 					breakpoint: 1280,
