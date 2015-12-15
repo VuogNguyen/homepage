@@ -27,14 +27,10 @@ var Home = {
 			self.projectSlider = $('.slick-slider').clone();
 		}
 
-		$('.slick-slider').on('init', function(event, slick){
-			var height = $(".porfolio-block").height()/2 - $(this).height()/2;
-			$(this).css({
-				"margin-top": height
-			});
-		});
 		if (width > 768) {
-			$(".slick-slider").slick({
+			$('.slick-slider').on('init', function(event, slick){
+			});
+			$.when($(".slick-slider").slick({
 				centerMode: true,
 				speed: 0,
 				slidesToShow: 5,
@@ -58,6 +54,12 @@ var Home = {
 					settings: "unslick"
 				}
 				]
+			})).done(function() {
+				var height = $(".porfolio-block").height()/2;
+				$(this).css({
+					"margin-top": height,
+					"transform": "translateY(-50%)"
+				});
 			});
 		} else {
 			$(".slick-slider.slick-initialized").slick('unslick');
