@@ -6,12 +6,13 @@
 	backface-visibility: hidden;
 	overflow: auto;
 	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-	@include transition(all 1s);
+	@include transition(all 1s ease-in-out);
 
 	ul.header-menu {
 		width: 100%;
 		max-width: 300px;
 		@include _(center-element-pos-a);
+		top: 45%;
 
 		li {
 			text-transform: uppercase;
@@ -20,14 +21,14 @@
 			letter-spacing: 2px;
 			-webkit-font-smoothing: antialiased;
 			line-height: 18px;
-			@include transition(all 0.5s);
+			@include transition(all 0.5s ease-in-out);
 		}
 
 		li a {
 			display: block;
 			text-transform: uppercase;
 			padding: .55em 0.8em;
-			@include transition(all 0.5s);
+			@include transition(all 0.5s ease-in-out);
 
 			&:hover {
 				color: #fff;

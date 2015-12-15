@@ -3,8 +3,9 @@
 	width: 100%;
 	background-color: #F2F3F5;
 	background-image: url("../images/wallpaper.jpg");
+	height: 100%;
 	@extend .bg-cover;
-	@include transition(0.5s all);
+	@include transition(0.75s all ease-in-out);
 
 	&::before {
 		content: "";
