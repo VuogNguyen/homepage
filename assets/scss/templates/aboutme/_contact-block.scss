@@ -1,0 +1,72 @@
+.contact-block {
+	margin-bottom: 125px;
+
+	input, textarea {    
+		position: relative;
+		@include transition(0.4s all ease-in-out);
+		width: calc(100% - 50px);
+		display: block;
+		margin: 0 auto;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-family: $f-open-sans;
+		font-weight: 400;
+		letter-spacing: 1px;
+		font-size: 13px;
+		line-height: 24px;
+		background: transparent;
+		border: none;
+		color: #737373;
+		border-bottom: 1px solid rgba(100,100,100,.2);
+
+		&:focus {
+			outline: none !important;
+			border-bottom: 1px solid #3E3E3E;
+		}
+	}
+
+	input {
+		padding-bottom: 15px;
+	}
+
+	textarea {
+		height: 150px;
+	}
+
+	input[type=submit] {
+		background: #efefef;
+		color: #212121;
+		font-size: 14px;
+		padding: 13px 30px;
+		max-width: 140px;
+		border: 1px solid rgba(100,100,100,.2);
+		border-radius: 100px;
+		margin: 0 auto;
+		display: block;
+
+		&:hover {
+			color: #fff;
+			background: #3E3E3E;
+		}
+	}
+
+	.wpcf7-validation-errors {
+		display: none;
+	}
+
+	.wpcf7-not-valid {
+		border-bottom: 1px solid #ff8181;
+	}
+
+	span.wpcf7-not-valid-tip {
+		margin-left: 5px;
+		margin-top: 5px;
+		font-size: 13px;
+		font-style: italic;
+	}
+
+	.wpcf7-mail-sent-ok {
+		border: none;
+		text-align: center;
+	}
+}

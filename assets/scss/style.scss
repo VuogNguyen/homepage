@@ -8,9 +8,17 @@
 @import "fonts";
 @import "general";
 @import "font-awesome/font-awesome";
+
+// Home Template
 @import "templates/home/intro-block";
 @import "templates/home/project-block";
 @import "templates/home/nav-block";
+
+// About Me Template
+@import "templates/aboutme/aboutme-block";
+@import "templates/aboutme/quote-block";
+@import "templates/aboutme/contact-block";
+
 @import "templates/header";
 @import "templates/visual-effects";
 @import "templates/hamburger-button";

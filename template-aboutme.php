@@ -34,7 +34,7 @@ get_header(); ?>
 	</div>
 
 	<div class="contact-block">
-		
+		<?php echo do_shortcode( '[contact-form-7 id="96" title="Contact Form"]' ); ?>	
 	</div>
 </section>
 
