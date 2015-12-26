@@ -1,3 +1,4 @@
+        </div>
         <!-- JS
         ================================================== -->
         <script src="<?php bloginfo('template_url'); ?>/assets/vendor/jquery-2.1.4.js"></script>

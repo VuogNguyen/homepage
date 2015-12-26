@@ -39,3 +39,35 @@
     </head>
 
     <body <?php body_class(); ?>>
+        <div class="animsition" >
+            <nav>
+                <div class="container">
+                    <h1 class="nav-title">Harvey</h1>
+
+                    <div class="menu hamburger-button js-btn" data-action="slide-down">
+                        <span class="menu-global menu-top"></span>
+                        <span class="menu-global menu-middle"></span>
+                        <span class="menu-global menu-bottom"></span>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="nav-block pos-f full-height bottom-up">
+                <?php if ( has_nav_menu( 'header_menu' ) ) : ?>
+                        <?php
+                        // Primary navigation menu.
+                        wp_nav_menu( array(
+                                'menu_class'     => 'header-menu pos-a',
+                                'theme_location' => 'header_menu',
+                        ) );
+                        ?>
+                <?php endif; ?>
+                <div class="social-menu">
+                    <ul>
+                        <a href="<?php the_field('twitter', 'option'); ?>"><li class="fa fa-twitter"></li></a>
+                        <a href="<?php the_field('linkedin', 'option'); ?>"><li class="fa fa-linkedin"></li></a>
+                        <a href="<?php the_field('github', 'option'); ?>"><li class="fa fa-github-alt"></li></a>
+                        <a href="mailto:<?php the_field('mail', 'option'); ?>"><li class="fa fa-envelope"></li></a>
+                    </ul>
+                </div>
+            </div>
