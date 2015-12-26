@@ -18,7 +18,7 @@ gulp.task('styles', function() {
     browsers: ['last 2 versions'],
     cascade: false
   }))
-  // .pipe(minifyCss({compatibility: 'ie8'}))
+  .pipe(minifyCss())
   // These last two should look familiar now :)
   .pipe(gulp.dest('dist/css/'));
 });
