@@ -29,7 +29,7 @@ ul, ol {
   list-style: none;
   padding: 0; }
 
-.bg-cover, .intro-block, .porfolio-block .featured-img {
+.bg-cover, .intro-block, .porfolio-block .featured-img, .about-intro-text p.avatar {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -82,6 +82,12 @@ body {
 
 a {
   color: #212121; }
+
+.container-block {
+  max-width: 1320px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0; }
 
 /*!
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -2390,6 +2396,140 @@ a {
       text-align: center; }
       .nav-block .social-menu li:before {
         font-size: 16px; }
+
+.aboutme-block {
+  padding: 118px 15px 0; }
+  .aboutme-block .title-page {
+    margin: 0 15px; }
+    .aboutme-block .title-page h3 {
+      margin: 0;
+      text-align: center;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      color: #414141;
+      font-family: "Montserrat", sans-serif; }
+    .aboutme-block .title-page p {
+      margin-top: 10px;
+      margin-bottom: 17px;
+      text-align: center;
+      font-style: italic;
+      font-size: 14px;
+      color: #747474;
+      line-height: 25px;
+      letter-spacing: 2px;
+      font-family: "Open Sans", sans-serif;
+      text-transform: uppercase;
+      font-weight: 300; }
+    .aboutme-block .title-page:after {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      border-top: 1px solid #CC5E5E;
+      width: 70px;
+      height: 1px; }
+
+.quote-block {
+  max-width: 1000px;
+  margin: 50px auto 100px; }
+
+.about-intro-text {
+  margin: 0 20px;
+  position: relative;
+  padding: 20px 60px 30px;
+  background-color: #3E3E3E; }
+  .about-intro-text:before {
+    position: absolute;
+    content: '';
+    left: 15px;
+    top: 15px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000; }
+  .about-intro-text .title h5 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-weight: 700;
+    text-align: center; }
+  .about-intro-text .title:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    border-top: 1px solid #CC5E5E;
+    width: 100px;
+    height: 1px; }
+  .about-intro-text .content p {
+    letter-spacing: 2px;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: justify;
+    color: #fafafa; }
+  .about-intro-text p.avatar {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 100px;
+    margin: 20px auto 0; }
+
+.contact-block {
+  margin-bottom: 125px; }
+  .contact-block input, .contact-block textarea {
+    position: relative;
+    transition: 0.4s all ease-in-out;
+    width: calc(100% - 50px);
+    display: block;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 13px;
+    line-height: 24px;
+    background: transparent;
+    border: none;
+    color: #737373;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.2); }
+    .contact-block input:focus, .contact-block textarea:focus {
+      outline: none !important;
+      border-bottom: 1px solid #3E3E3E; }
+  .contact-block input {
+    padding-bottom: 15px; }
+  .contact-block textarea {
+    height: 150px; }
+  .contact-block input[type=submit] {
+    background: #efefef;
+    color: #212121;
+    font-size: 14px;
+    padding: 13px 30px;
+    max-width: 140px;
+    border: 1px solid rgba(100, 100, 100, 0.2);
+    border-radius: 100px;
+    margin: 0 auto;
+    display: block; }
+    .contact-block input[type=submit]:hover {
+      color: #fff;
+      background: #3E3E3E; }
+  .contact-block .wpcf7-validation-errors {
+    display: none; }
+  .contact-block .wpcf7-not-valid {
+    border-bottom: 1px solid #ff8181; }
+  .contact-block span.wpcf7-not-valid-tip {
+    margin-left: 5px;
+    margin-top: 5px;
+    font-size: 13px;
+    font-style: italic; }
+  .contact-block .wpcf7-mail-sent-ok {
+    border: none;
+    text-align: center; }
 
 nav {
   position: fixed;
