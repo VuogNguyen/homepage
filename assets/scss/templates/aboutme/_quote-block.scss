@@ -1,0 +1,62 @@
+.quote-block {
+	max-width: 1000px;
+	margin: 50px auto 100px;
+}
+
+.about-intro-text {
+	margin: 0 20px;
+	position: relative;
+	padding: 20px 60px 30px;
+	background-color: rgba(40,40,40,1);
+
+	&:before {
+		position: absolute;
+		content: '';
+		left: 15px;
+		top: 15px;
+		width: 100%;
+		height: 100%;
+		border: 1px solid #000;
+	}
+
+	.title {
+		h5 {
+			color: #fff;
+			font-size: 20px;
+			line-height: 26px;
+			text-transform: uppercase;
+			letter-spacing: 7px;
+			font-weight: 700;
+			text-align: center;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			margin: 0 auto;
+			border-top: 1px solid #CC5E5E;
+			width: 100px;
+			height: 1px;
+		}
+	}
+
+	.content p {
+		letter-spacing: 2px;
+		font-family: $f-playfair;
+		font-style: italic;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 24px;
+		text-align: justify;
+		color: #fafafa;
+	}
+
+	p.avatar {
+		@extend .bg-cover;
+		width: 60px;
+		height: 60px;
+		display: block;
+		border-radius: 100px;
+		margin: 20px auto 0;
+	}
+}
