@@ -2339,7 +2339,7 @@ a {
       .porfolio-block .slick-next:before {
         display: none; }
     .porfolio-block .slick-prev {
-      left: 30px; }
+      left: 52px; }
       .porfolio-block .slick-prev:before {
         display: none; } }
 
@@ -2693,8 +2693,8 @@ nav {
     -webkit-transform: rotate(-45deg) translateX(-50%);
     transform: rotate(-45deg) translateX(-50%); }
   .nv-arrow.arrow-left, .porfolio-block .arrow-left.slick-arrow, .porfolio-block .slick-prev {
-    -webkit-transform: rotate(-135deg) translateX(-50%);
-    transform: rotate(-135deg) translateX(-50%); }
+    -webkit-transform: rotate(45deg) translateX(-50%) scale(-1);
+    transform: rotate(45deg) translateX(-50%) scale(-1); }
   .nv-arrow.arrow-right, .porfolio-block .arrow-right.slick-arrow, .porfolio-block .slick-next {
     -webkit-transform: rotate(45deg) translateX(-50%);
     transform: rotate(45deg) translateX(-50%); }
