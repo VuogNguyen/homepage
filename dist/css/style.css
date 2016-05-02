@@ -2214,12 +2214,12 @@ a {
     width: 100%;
     height: 40px;
     bottom: -130px; }
-    .intro-block .arrow-container span.nv-arrow, .intro-block .arrow-container .porfolio-block span.slick-arrow, .porfolio-block .intro-block .arrow-container span.slick-arrow {
+    .intro-block .arrow-container span.nv-arrow {
       position: absolute;
       left: 50%; }
   @media (min-width: 768px) {
     .intro-block .arrow-container {
-      bottom: -160px; }
+      bottom: -130px; }
     .intro-block .content-wrapper {
       max-width: 580px; }
       .intro-block .content-wrapper p.quote {
@@ -2231,19 +2231,21 @@ a {
 .porfolio-block {
   width: 100%; }
   .porfolio-block ul.slick-slider {
-    margin: 0;
+    margin: 0 auto;
     height: 100%;
-    overflow-y: auto; }
+    overflow-y: auto;
+    padding-top: 130px;
+    text-align: center;
+    width: 100%;
+    display: block; }
   .porfolio-block .slick-slider > li {
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     position: relative;
-    margin: 4%;
     -webkit-backface-visibility: hidden;
     /* Chrome, Safari, Opera */
-    backface-visibility: hidden; }
-    .porfolio-block .slick-slider > li:first-child {
-      margin-top: 150px; }
+    backface-visibility: hidden;
+    margin: 5%; }
     .porfolio-block .slick-slider > li a {
       display: block;
       width: 100%;
@@ -2284,64 +2286,27 @@ a {
       text-overflow: ellipsis;
       margin: 0; }
   @media (min-width: 480px) {
+    .porfolio-block .slick-slider {
+      padding: 170px 20px 0; }
     .porfolio-block .slick-slider > li {
-      display: inline-block;
-      width: calc(50% - 33px);
-      margin: 20px; }
-      .porfolio-block .slick-slider > li:nth-child(even) {
-        margin-left: 10px; }
-      .porfolio-block .slick-slider > li:nth-child(odd) {
-        margin-right: 10px; }
+      width: calc(50% - 20px);
+      margin: 10px;
+      float: left; }
+    .porfolio-block .project-info h6 {
+      font-size: 11px;
+      letter-spacing: 0; }
+    .porfolio-block .project-info p {
+      font-size: 12px; }
     .porfolio-block .featured-img {
       margin: 3px 3px 0; } }
   @media (min-width: 768px) {
-    .porfolio-block .slick-track, .porfolio-block .slick-slide {
-      transition: 0.5s all; }
     .porfolio-block .slick-slider {
-      height: initial !important;
-      margin: 0 auto 0; }
-    .porfolio-block .slick-slider .slick-slide {
-      display: block;
-      height: 100%;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      position: relative;
-      margin: 10px; }
-      .porfolio-block .slick-slider .slick-slide a {
-        display: block; }
-        .porfolio-block .slick-slider .slick-slide a .featured-img {
-          position: relative; }
-          .porfolio-block .slick-slider .slick-slide a .featured-img::before {
-            content: "";
-            border-radius: 5px 5px 0 0;
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.25);
-            top: 0;
-            right: 0;
-            left: 0;
-            transition: 0.5s all; }
-        .porfolio-block .slick-slider .slick-slide a:hover .featured-img::before {
-          background-color: rgba(0, 0, 0, 0.3); }
-    .porfolio-block .slick-arrow {
-      display: block;
-      position: absolute;
-      top: 45%;
-      width: 30px !important;
-      height: 30px !important;
-      border-width: 2px !important;
-      border-color: #000000 !important;
-      z-index: 1; }
-    .porfolio-block .slick-next {
-      right: 30px; }
-      .porfolio-block .slick-next:before {
-        display: none; }
-    .porfolio-block .slick-prev {
-      left: 52px; }
-      .porfolio-block .slick-prev:before {
-        display: none; } }
+      padding-top: 140px !important; }
+    .porfolio-block .slick-slider > li {
+      width: calc(33.33333333% - 20px); } }
+  @media (min-width: 1024px) {
+    .porfolio-block .slick-slider > li {
+      width: calc(20% - 20px); } }
 
 .nav-block {
   background: rgba(247, 247, 247, 0.96);
@@ -2678,7 +2643,7 @@ nav {
     background-color: rgba(178, 178, 179, 0.58);
     color: #FFF; }
 
-.nv-arrow, .porfolio-block .slick-arrow {
+.nv-arrow {
   margin: 0 auto;
   width: 20px;
   height: 20px;
@@ -2686,15 +2651,15 @@ nav {
   border-right: 1px solid #A3A3A3;
   cursor: pointer;
   transition: 0.75s all; }
-  .nv-arrow.arrow-down, .intro-block .arrow-container span.nv-arrow, .intro-block .arrow-container .porfolio-block span.slick-arrow, .porfolio-block .intro-block .arrow-container span.slick-arrow, .porfolio-block .arrow-down.slick-arrow {
+  .nv-arrow.arrow-down, .intro-block .arrow-container span.nv-arrow {
     -webkit-transform: rotate(135deg) translateX(-50%);
     transform: rotate(135deg) translateX(-50%); }
-  .nv-arrow.arrow-up, .intro-block.bottom-up span.nv-arrow, .intro-block.bottom-up .porfolio-block span.slick-arrow, .porfolio-block .intro-block.bottom-up span.slick-arrow, .porfolio-block .arrow-up.slick-arrow {
+  .nv-arrow.arrow-up, .intro-block.bottom-up span.nv-arrow {
     -webkit-transform: rotate(-45deg) translateX(-50%);
     transform: rotate(-45deg) translateX(-50%); }
-  .nv-arrow.arrow-left, .porfolio-block .arrow-left.slick-arrow, .porfolio-block .slick-prev {
+  .nv-arrow.arrow-left {
     -webkit-transform: rotate(45deg) translateX(-50%) scale(-1);
     transform: rotate(45deg) translateX(-50%) scale(-1); }
-  .nv-arrow.arrow-right, .porfolio-block .arrow-right.slick-arrow, .porfolio-block .slick-next {
+  .nv-arrow.arrow-right {
     -webkit-transform: rotate(45deg) translateX(-50%);
     transform: rotate(45deg) translateX(-50%); }

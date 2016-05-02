@@ -19,7 +19,7 @@ get_header(); ?>
 		</div>
 	</div>
 
-	<div class="porfolio-block full-height pos-f">
+	<div class="porfolio-block">
 		<ul class="slick-slider">
 			<?php
 			if( have_rows('porfolio') ):

@@ -8,9 +8,9 @@ var Home = {
 		self.toggleHamburgerBtt();
 		self.handleClick();
 
-		self.addSlick();
+		// self.addSlick();
 		$(window).resize(function(){
-			self.addSlick();
+			// self.addSlick();
 		});
 	},
 
@@ -22,14 +22,13 @@ var Home = {
 
 	addSlick: function() {
 		var self = this;
-		width = $(window).width();
+		var width = $(window).width();
 		if (self.projectSlider === "") {
 			self.projectSlider = $('.slick-slider').clone();
 		}
 
 		if (width > 768) {
-			$('.slick-slider').on('init', function(event, slick){
-			});
+			$('.slick-slider').on('init', function(){});
 			$.when($(".slick-slider").slick({
 				centerMode: true,
 				speed: 0,
@@ -71,7 +70,6 @@ var Home = {
 	// Toggle subnav when click on menu button
 	// in mobile screen
 	toggleHamburgerBtt: function() {
-		var self = this;
 		$('.menu').on('click', function(event) {
 			$('.menu-top').toggleClass('menu-top-click');
 			$('.menu-middle').toggleClass('menu-middle-click');
@@ -99,7 +97,6 @@ var Home = {
 	},
 
 	handleClick: function() {
-		var self = this;
 		$('.js-btn').click(function(){
 			var action = $(this).attr("data-action");
 			switch (action) {
